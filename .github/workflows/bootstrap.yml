@@ -93,10 +93,10 @@ jobs:
           git config user.name "ousic-bot"
           git config user.email "bot@ousic.local"
           rm -rf ousic ousic.xcodeproj tools README.md .gitignore
+          rm -rf src/.github
           cp -R src/. .
           rm -rf src Payload
           git add -A
           git commit -m "chore: ousic source [skip ci]" || echo "nothing to commit"
           git pull --rebase --autostash origin main || true
           git push origin HEAD:main
-          echo pushed
