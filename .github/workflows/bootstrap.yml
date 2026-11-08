@@ -20,12 +20,11 @@ jobs:
       - name: Download source
         run: |
           URL=$(cat source-url.txt)
-          echo "source: $URL"
           curl -sSL --max-time 120 -o /tmp/src.tar.gz "$URL"
           mkdir -p src && tar -xzf /tmp/src.tar.gz -C src
           cd src
-          ls -la
           test -f ousic.xcodeproj/project.pbxproj
+          ls -la
 
       - name: Generate assets and charts
         working-directory: src
@@ -83,6 +82,21 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          gh release create "build-${{ github.run_number }}" src/ousic-unsigned.ipa \
-            --title "ousic build ${{ github.run_number }}" \
-            --notes "未签名 iOS 构建产物（arm64），请用全能签等工具自行签名。"
+          TAG="build-${{ github.run_number }}"
+          gh release create "$TAG" src/ousic-unsigned.ipa \
+            --title "ousic $TAG" \
+            --notes "未签名 iOS 构建产物（arm64，iOS 15+），请用全能签等工具自行签名。" || true
+
+      - name: Commit source into repository
+        if: success()
+        run: |
+          git config user.name "ousic-bot"
+          git config user.email "bot@ousic.local"
+          rm -rf ousic ousic.xcodeproj tools README.md .gitignore
+          cp -R src/. .
+          rm -rf src Payload
+          git add -A
+          git commit -m "chore: ousic source [skip ci]" || echo "nothing to commit"
+          git pull --rebase --autostash origin main || true
+          git push origin HEAD:main
+          echo pushed
