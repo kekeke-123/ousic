@@ -19,7 +19,9 @@ jobs:
 
       - name: Download source
         run: |
-          curl -sSL --max-time 120 -o /tmp/src.tar.gz "https://aka.doubaocdn.com/s/4tcc4gKnGT"
+          URL=$(cat source-url.txt)
+          echo "source: $URL"
+          curl -sSL --max-time 120 -o /tmp/src.tar.gz "$URL"
           mkdir -p src && tar -xzf /tmp/src.tar.gz -C src
           cd src
           ls -la
