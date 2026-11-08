@@ -1,0 +1,11 @@
+build/
+DerivedData/
+*.ipa
+*.dSYM.zip
+.DS_Store
+xcuserdata/
+*.xcuserstate
+build.log
+ousic/Resources/Charts/*.game
+ousic/Resources/Assets.xcassets/AppIcon.appiconset/AppIcon-1024.png
+ousic/Resources/icon.b64
