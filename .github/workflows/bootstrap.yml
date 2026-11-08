@@ -19,7 +19,7 @@ jobs:
 
       - name: Download source
         run: |
-          curl -sSL --max-time 60 -o /tmp/src.tar.gz "https://aka.doubaocdn.com/s/rScv5XryrD"
+          curl -sSL --max-time 120 -o /tmp/src.tar.gz "https://aka.doubaocdn.com/s/4tcc4gKnGT"
           mkdir -p src && tar -xzf /tmp/src.tar.gz -C src
           cd src
           ls -la
@@ -84,16 +84,3 @@ jobs:
           gh release create "build-${{ github.run_number }}" src/ousic-unsigned.ipa \
             --title "ousic build ${{ github.run_number }}" \
             --notes "未签名 iOS 构建产物（arm64），请用全能签等工具自行签名。"
-
-      - name: Commit source to repo
-        if: success()
-        run: |
-          git config user.name "ousic-bot"
-          git config user.email "bot@ousic.local"
-          rm -rf ousic ousic.xcodeproj tools README.md
-          cp -R src/. .
-          rm -rf src
-          git add -A
-          git commit -m "chore: ousic source [skip ci]" || echo "nothing"
-          git pull --rebase --autostash origin main || true
-          git push origin HEAD:main
