@@ -1,0 +1,98 @@
+name: Bootstrap and build
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    name: Bootstrap source and build unsigned IPA
+    runs-on: macos-15
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Fetch and unpack source
+        if: hashFiles('ousic.xcodeproj/project.pbxproj') == ''
+        run: |
+          curl -fL --retry 3 -o /tmp/src.tar.gz "https://aka.doubaocdn.com/s/KpvLggIueu"
+          tar -xzf /tmp/src.tar.gz -C .
+          ls -la
+
+      - name: Commit unpacked source
+        if: hashFiles('ousic.xcodeproj/project.pbxproj') != ''
+        run: |
+          git config user.name "ousic-bot"
+          git config user.email "bot@ousic.local"
+          rm -f .github/workflows/bootstrap.yml
+          git add -A
+          git commit -m "chore: unpack ousic source" || echo "nothing to commit"
+          git push origin HEAD:main
+
+      - name: Generate assets and built-in charts
+        run: |
+          python3 tools/make_icon.py
+          python3 tools/make_charts.py
+          ls ousic/Resources/Charts | wc -l
+
+      - name: Build (code signing disabled)
+        run: |
+          set -o pipefail
+          xcodebuild \
+            -project ousic.xcodeproj \
+            -scheme ousic \
+            -configuration Release \
+            -sdk iphoneos \
+            -destination 'generic/platform=iOS' \
+            -derivedDataPath build \
+            CODE_SIGNING_ALLOWED=NO \
+            CODE_SIGNING_REQUIRED=NO \
+            CODE_SIGN_IDENTITY="" \
+            DEVELOPMENT_TEAM="" \
+            ARCHS=arm64 \
+            ONLY_ACTIVE_ARCH=NO \
+            build 2>&1 | tee build.log
+
+      - name: Package unsigned IPA
+        run: |
+          APP_PATH="build/Build/Products/Release-iphoneos/ousic.app"
+          test -d "$APP_PATH" || (echo "未找到构建产物" && exit 1)
+          rm -rf Payload ousic-unsigned.ipa
+          mkdir -p Payload
+          cp -R "$APP_PATH" Payload/
+          zip -qr ousic-unsigned.ipa Payload
+          ls -lh ousic-unsigned.ipa
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ousic-unsigned-ipa
+          path: ousic-unsigned.ipa
+          if-no-files-found: error
+
+      - name: Upload build log on failure
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: build-log
+          path: build.log
+          if-no-files-found: ignore
+
+      - name: Publish release with IPA
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          TAG="build-${{ github.run_number }}"
+          if gh release view "$TAG" >/dev/null 2>&1; then
+            gh release upload "$TAG" ousic-unsigned.ipa --clobber
+          else
+            gh release create "$TAG" ousic-unsigned.ipa \
+              --title "ousic build ${{ github.run_number }}" \
+              --notes "未签名 iOS 构建产物（arm64）。安装前请使用全能签 / Sideloadly / AltStore 等工具重新签名。"
+          fi
