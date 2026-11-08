@@ -1,0 +1,4 @@
+http=200 size=41187
+curl_exit=0
+/tmp/src.tar.gz: gzip compressed data, was "src.tar", last modified: Sun Nov  8 08:05:15 2026, max compression, from Unix, original size modulo 2^32 194560
+-rw-r--r--  1 runner  wheel  41187 Nov  8 08:12 /tmp/src.tar.gz
