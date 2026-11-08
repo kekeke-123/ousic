@@ -1,0 +1,390 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9496AE364CA528F42E540937 /* OusicApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503E32BACD6B4085276257EC /* OusicApp.swift */; };
+		0AD77E2DEB8B630EC51F0C71 /* Chart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ABF9632691D8ACAB9670255 /* Chart.swift */; };
+		B794ECE27E2F578DE9BDCF20 /* ChartStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67358C1774175E69D0B5DDD /* ChartStore.swift */; };
+		75E91784B345468AAD49ACCB /* GameResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 577058B542F74DE54B28FA18 /* GameResult.swift */; };
+		103B88A7E42A3F5C3DEF402D /* GameSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A8B355F9B3C56E7D6A6DD1 /* GameSettings.swift */; };
+		5E8F6B378BDD9F779CB7B35B /* MusicPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC030C421A1EBF56DFF86192 /* MusicPlayer.swift */; };
+		7E775997DA19FA51BB8A25B2 /* SongSynth.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5BCC2DA092E1FC478F28428 /* SongSynth.swift */; };
+		79D196D7555A6C14B8C946C5 /* GameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A93775B0839CDC2E12EA9D4 /* GameController.swift */; };
+		1FFB803EBCD369764C3D74B7 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = C369D13CBA84841E55B4CFAE /* GameScene.swift */; };
+		F7D1BCC3BF6A7FE94D7A38F9 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE2D4CE49DE1703D6F825397 /* GameView.swift */; };
+		D22BF67BE0EDFF019239909B /* ChartFormatHelpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60105F4F14F7D54B75C2665D /* ChartFormatHelpView.swift */; };
+		F561F4AC40E7AB1B191ABC79 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A00CF9648E127AD22B3BE2 /* HomeView.swift */; };
+		778DAD64EB6615BEDF42DA09 /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED95A6DB4C5AB6B7FAFA870 /* ResultView.swift */; };
+		0366047E1EAD5CC5EA2D8838 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6C00F877111216236EB6BB /* SettingsView.swift */; };
+		9D64427F519ABFFA0428D15C /* SongDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF80626AF1C065D0518BF5A /* SongDetailView.swift */; };
+		B20563F92186107432B091DE /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F0D8B2D9EF09C62BF078B5 /* Theme.swift */; };
+		5DDBF56ADE2A3FA417AF0D28 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC13B5EC966CE305A2FA173A /* Assets.xcassets */; };
+		C4F3A2FF39B09C648DC2ECD5 /* Charts in Resources */ = {isa = PBXBuildFile; fileRef = AABA66329F06DA44049E1AA6 /* Charts */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		A10000000000000000000005 /* ousic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ousic.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		503E32BACD6B4085276257EC /* OusicApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OusicApp.swift; sourceTree = "<group>"; };
+		3ABF9632691D8ACAB9670255 /* Chart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chart.swift; sourceTree = "<group>"; };
+		A67358C1774175E69D0B5DDD /* ChartStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartStore.swift; sourceTree = "<group>"; };
+		577058B542F74DE54B28FA18 /* GameResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameResult.swift; sourceTree = "<group>"; };
+		60A8B355F9B3C56E7D6A6DD1 /* GameSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSettings.swift; sourceTree = "<group>"; };
+		CC030C421A1EBF56DFF86192 /* MusicPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayer.swift; sourceTree = "<group>"; };
+		F5BCC2DA092E1FC478F28428 /* SongSynth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongSynth.swift; sourceTree = "<group>"; };
+		8A93775B0839CDC2E12EA9D4 /* GameController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameController.swift; sourceTree = "<group>"; };
+		C369D13CBA84841E55B4CFAE /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		AE2D4CE49DE1703D6F825397 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
+		60105F4F14F7D54B75C2665D /* ChartFormatHelpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartFormatHelpView.swift; sourceTree = "<group>"; };
+		B4A00CF9648E127AD22B3BE2 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		BED95A6DB4C5AB6B7FAFA870 /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
+		9B6C00F877111216236EB6BB /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		1EF80626AF1C065D0518BF5A /* SongDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongDetailView.swift; sourceTree = "<group>"; };
+		C1F0D8B2D9EF09C62BF078B5 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		AC13B5EC966CE305A2FA173A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AABA66329F06DA44049E1AA6 /* Charts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Charts; sourceTree = "<group>"; };
+		770C5B730A8FBE3C009C5372 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A10000000000000000000007 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+				A10000000000000000000003 = {
+			isa = PBXGroup;
+			children = (
+				D1D0524B025E57AFFF263442,
+				35D315DEBBF45F223B169A61,
+				E45F76C2D80FAD483876517A,
+				348F96D797C63164F6588C42,
+				38DF21AEF4612506D6BE5CBE,
+				887A6F90336FF23D95C3914B,
+				770C5B730A8FBE3C009C5372,
+			);
+			path = ousic;
+			sourceTree = "<group>";
+		};
+				A10000000000000000000004 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A10000000000000000000005 /* ousic.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+				D1D0524B025E57AFFF263442 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				503E32BACD6B4085276257EC /* OusicApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+				35D315DEBBF45F223B169A61 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				3ABF9632691D8ACAB9670255 /* Chart.swift */,
+				A67358C1774175E69D0B5DDD /* ChartStore.swift */,
+				577058B542F74DE54B28FA18 /* GameResult.swift */,
+				60A8B355F9B3C56E7D6A6DD1 /* GameSettings.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+				E45F76C2D80FAD483876517A /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+				CC030C421A1EBF56DFF86192 /* MusicPlayer.swift */,
+				F5BCC2DA092E1FC478F28428 /* SongSynth.swift */,
+			);
+			path = Audio;
+			sourceTree = "<group>";
+		};
+				348F96D797C63164F6588C42 /* Game */ = {
+			isa = PBXGroup;
+			children = (
+				8A93775B0839CDC2E12EA9D4 /* GameController.swift */,
+				C369D13CBA84841E55B4CFAE /* GameScene.swift */,
+				AE2D4CE49DE1703D6F825397 /* GameView.swift */,
+			);
+			path = Game;
+			sourceTree = "<group>";
+		};
+				38DF21AEF4612506D6BE5CBE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				60105F4F14F7D54B75C2665D /* ChartFormatHelpView.swift */,
+				B4A00CF9648E127AD22B3BE2 /* HomeView.swift */,
+				BED95A6DB4C5AB6B7FAFA870 /* ResultView.swift */,
+				9B6C00F877111216236EB6BB /* SettingsView.swift */,
+				1EF80626AF1C065D0518BF5A /* SongDetailView.swift */,
+				C1F0D8B2D9EF09C62BF078B5 /* Theme.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+				887A6F90336FF23D95C3914B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				AC13B5EC966CE305A2FA173A /* Assets.xcassets */,
+				AABA66329F06DA44049E1AA6 /* Charts */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A10000000000000000000001 /* ousic */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A1000000000000000000000A /* Build configuration list for PBXNativeTarget "ousic" */;
+			buildPhases = (
+				A10000000000000000000006 /* Sources */,
+				A10000000000000000000007 /* Frameworks */,
+				A10000000000000000000008 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ousic;
+			productName = ousic;
+			productReference = A10000000000000000000005 /* ousic.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A10000000000000000000002 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1600;
+				LastUpgradeCheck = 1600;
+				TargetAttributes = {
+					A10000000000000000000001 = {
+						CreatedOnToolsVersion = 16.0;
+					};
+				};
+			};
+			buildConfigurationList = A10000000000000000000009 /* Build configuration list for PBXProject "ousic" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A10000000000000000000003;
+			productRefGroup = A10000000000000000000004 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A10000000000000000000001 /* ousic */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A10000000000000000000008 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5DDBF56ADE2A3FA417AF0D28 /* Assets.xcassets in Resources */,
+				C4F3A2FF39B09C648DC2ECD5 /* Charts in Resources */
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A10000000000000000000006 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9496AE364CA528F42E540937 /* OusicApp.swift in Sources */,
+				0AD77E2DEB8B630EC51F0C71 /* Chart.swift in Sources */,
+				B794ECE27E2F578DE9BDCF20 /* ChartStore.swift in Sources */,
+				75E91784B345468AAD49ACCB /* GameResult.swift in Sources */,
+				103B88A7E42A3F5C3DEF402D /* GameSettings.swift in Sources */,
+				5E8F6B378BDD9F779CB7B35B /* MusicPlayer.swift in Sources */,
+				7E775997DA19FA51BB8A25B2 /* SongSynth.swift in Sources */,
+				79D196D7555A6C14B8C946C5 /* GameController.swift in Sources */,
+				1FFB803EBCD369764C3D74B7 /* GameScene.swift in Sources */,
+				F7D1BCC3BF6A7FE94D7A38F9 /* GameView.swift in Sources */,
+				D22BF67BE0EDFF019239909B /* ChartFormatHelpView.swift in Sources */,
+				F561F4AC40E7AB1B191ABC79 /* HomeView.swift in Sources */,
+				778DAD64EB6615BEDF42DA09 /* ResultView.swift in Sources */,
+				0366047E1EAD5CC5EA2D8838 /* SettingsView.swift in Sources */,
+				9D64427F519ABFFA0428D15C /* SongDetailView.swift in Sources */,
+				B20563F92186107432B091DE /* Theme.swift in Sources */
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		A1000000000000000000000B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_TESTABILITY = YES;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A1000000000000000000000C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A1000000000000000000000D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = ousic/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ousic.game;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_STRICT_CONCURRENCY = minimal;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A1000000000000000000000E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = ousic/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ousic.game;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_STRICT_CONCURRENCY = minimal;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A10000000000000000000009 /* Build configuration list for PBXProject "ousic" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A1000000000000000000000B /* Debug */,
+				A1000000000000000000000C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A1000000000000000000000A /* Build configuration list for PBXNativeTarget "ousic" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A1000000000000000000000D /* Debug */,
+				A1000000000000000000000E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A10000000000000000000002 /* Project object */;
+}
