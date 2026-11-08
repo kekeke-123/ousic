@@ -19,24 +19,25 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Fetch and unpack source
-        if: hashFiles('ousic.xcodeproj/project.pbxproj') == ''
+        if: contains(github.event.head_commit.message, '[sync]')
         run: |
-          curl -fL --retry 3 -o /tmp/src.tar.gz "https://aka.doubaocdn.com/s/KpvLggIueu"
+          curl -fL --retry 3 -o /tmp/src.tar.gz "https://aka.doubaocdn.com/s/rScv5XryrD"
           tar -xzf /tmp/src.tar.gz -C .
           ls -la
 
       - name: Commit unpacked source
-        if: hashFiles('ousic.xcodeproj/project.pbxproj') != ''
+        if: contains(github.event.head_commit.message, '[sync]')
         run: |
           git config user.name "ousic-bot"
           git config user.email "bot@ousic.local"
-          rm -f .github/workflows/bootstrap.yml
           git add -A
           git commit -m "chore: unpack ousic source" || echo "nothing to commit"
+          git pull --rebase --autostash origin main || true
           git push origin HEAD:main
 
-      - name: Generate assets and built-in charts
+      - name: Verify project
         run: |
+          test -f ousic.xcodeproj/project.pbxproj
           python3 tools/make_icon.py
           python3 tools/make_charts.py
           ls ousic/Resources/Charts | wc -l
